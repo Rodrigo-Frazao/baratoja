@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ralador Inox 16 em 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -20,13 +21,12 @@
       text-align: center;
     }
     .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
       padding: 20px;
     }
-    .galeria img {
+    .galeria-slider img {
       width: 100%;
+      max-height: 400px;
+      object-fit: cover;
       border-radius: 10px;
     }
     .beneficios {
@@ -93,14 +93,16 @@
   </header>
 
   <section class="galeria">
-    <img src="ralador1.png" alt="Ralador 1" />
-    <img src="ralador2.png" alt="Ralador 2" />
-    <img src="ralador3.png" alt="Ralador 3" />
-    <img src="ralador4.png" alt="Ralador 4" />
-    <img src="ralador5.png" alt="Ralador 5" />
-    <img src="ralador6.png" alt="Ralador 6" />
-    <img src="ralador7.png" alt="Ralador 7" />
-    <img src="ralador9.png" alt="Ralador 9" />
+    <div class="galeria-slider">
+      <img src="ralador1.png" alt="Ralador 1" />
+      <img src="ralador2.png" alt="Ralador 2" />
+      <img src="ralador3.png" alt="Ralador 3" />
+      <img src="ralador4.png" alt="Ralador 4" />
+      <img src="ralador5.png" alt="Ralador 5" />
+      <img src="ralador6.png" alt="Ralador 6" />
+      <img src="ralador7.png" alt="Ralador 7" />
+      <img src="ralador9.png" alt="Ralador 9" />
+    </div>
   </section>
 
   <section class="beneficios">
@@ -117,12 +119,24 @@
   <section class="cta">
     <h2>🔥 Oferta por tempo limitado!</h2>
     <div class="contador" id="contador"></div>
-    <a href="#comprar" class="botao">COMPRAR AGORA</a>
+    <a href="https://barato-ja.mycartpanda.com/checkout/186245679:1" class="botao">COMPRAR AGORA</a>
   </section>
 
   <a href="https://wa.me/SEUNUMERO?text=Olá!%20Tenho%20interesse%20no%20Ralador%2016%20em%201." class="whatsapp" target="_blank">Fale conosco</a>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script>
+    $('.galeria-slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 3000
+    });
+
     function iniciarContagemRegressiva() {
       const tempoFinal = new Date();
       tempoFinal.setHours(tempoFinal.getHours() + 1);
