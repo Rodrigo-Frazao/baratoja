@@ -1,7 +1,189 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script>
-  $(document).ready(function() {
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ralador Inox 16 em 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #1e1e2f;
+      color: #ffffff;
+    }
+    header {
+      background: #3b0a72;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .desconto-banner {
+      background: #5e35b1;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffea00;
+    }
+    .galeria {
+      padding: 20px;
+    }
+    .galeria-slider img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .preco {
+      font-size: 26px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .preco del {
+      color: #ff6f61;
+      margin-right: 10px;
+    }
+    .preco strong {
+      color: #76ff03;
+    }
+    .beneficios {
+      padding: 20px;
+      background: #2b2b3d;
+      text-align: center;
+    }
+    .beneficios h2 {
+      color: #b388ff;
+    }
+    .beneficios ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .beneficios ul li::before {
+      content: "✔️";
+      margin-right: 10px;
+      color: #b388ff;
+    }
+    .video {
+      padding: 20px;
+      text-align: center;
+    }
+    .video iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 10px;
+    }
+    .cta {
+      background: #3b0a72;
+      padding: 30px;
+      text-align: center;
+    }
+    .cta h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    .botao {
+      background: #7c4dff;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      margin-left: 20px;
+      margin-top: 6px;
+      text-decoration: none;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .botao2 {
+      background: #7c4dff;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      position: relative;
+      top: 6px;
+      align-items: center;
+      text-decoration: none;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .contador {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="desconto-banner">
+    🎉 50% OFF! DE R$<del>75,00</del> POR <strong>R$40,00</strong>
+  </div>
+
+  <header>
+    <h1>Ralador Inox 16 em 1</h1>
+    <p>Praticidade, eficiência e inovação na sua cozinha!</p>
+  </header>
+
+  <section class="galeria">
+    <div class="galeria-slider">
+      <img src="ralador1.png" alt="Ralador 1" />
+      <img src="ralador2.png" alt="Ralador 2" />
+      <img src="ralador3.png" alt="Ralador 3" />
+      <img src="ralador4.png" alt="Ralador 4" />
+      <img src="ralador5.png" alt="Ralador 5" />
+      <img src="ralador6.png" alt="Ralador 6" />
+      <img src="ralador7.png" alt="Ralador 7" />
+      <img src="ralador9.png" alt="Ralador 9" />
+    </div>
+  </section>
+
+  <div class="preco">
+    De <del>R$75,00</del> por apenas <strong>R$40,00</strong>! (50% OFF)
+  </div>
+<a href="https://barato-ja.mycartpanda.com/checkout/186245679:1" class="botao">COMPRAR AGORA</a>
+  <section class="beneficios">
+    <h2>Por que escolher o Ralador 16 em 1?</h2>
+    <ul>
+      <li>16 funções diferentes em um único produto</li>
+      <li>Design moderno e resistente</li>
+      <li>Compacto e fácil de limpar</li>
+      <li>Ideal para frutas, legumes, queijos e mais</li>
+      <li>Economia de tempo na cozinha</li>
+    </ul>
+  </section>
+
+  <section class="video">
+    <h2>Veja o ralador em ação:</h2>
+    <iframe src="https://www.youtube.com/embed/wi-5kt_8LC0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="cta">
+    <h2>🔥 Oferta por tempo limitado!</h2>
+    <div class="contador" id="contador"></div>
+    <a href="https://barato-ja.mycartpanda.com/checkout/186245679:1" class="botao2">COMPRAR AGORA</a>
+  </section>
+
+  <a href="https://wa.me/SEUNUMERO?text=Olá!%20Tenho%20interesse%20no%20Ralador%2016%20em%201." class="whatsapp" target="_blank">Fale conosco</a>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
     $('.galeria-slider').slick({
       dots: true,
       infinite: true,
@@ -30,7 +212,7 @@
         const segundos = Math.floor((distancia / 1000) % 60);
 
         document.getElementById("contador").innerHTML =
-          `Termina em ${horas}h ${minutos}m ${segundos}s`;
+          Termina em ${horas}h ${minutos}m ${segundos}s;
       }
 
       atualizarContador();
@@ -38,5 +220,6 @@
     }
 
     iniciarContagemRegressiva();
-  });
-</script>
+  </script>
+</body>
+</html>
