@@ -142,16 +142,36 @@
 
   <section class="galeria">
     <div class="galeria-slider">
-      <img src="ralador1.png" alt="Ralador 1" />
-      <img src="ralador2.png" alt="Ralador 2" />
-      <img src="ralador3.png" alt="Ralador 3" />
-      <img src="ralador4.png" alt="Ralador 4" />
-      <img src="ralador5.png" alt="Ralador 5" />
-      <img src="ralador6.png" alt="Ralador 6" />
-      <img src="ralador7.png" alt="Ralador 7" />
-      <img src="ralador9.png" alt="Ralador 9" />
+      <div><img src="ralador1.png" alt="Ralador 1" /></div>
+      <div><img src="ralador2.png" alt="Ralador 2" /></div>
+      <div><img src="ralador3.png" alt="Ralador 3" /></div>
+      <div><img src="ralador4.png" alt="Ralador 4" /></div>
+      <div><img src="ralador5.png" alt="Ralador 5" /></div>
+      <div><img src="ralador6.png" alt="Ralador 6" /></div>
+      <div><img src="ralador7.png" alt="Ralador 7" /></div>
+      <div><img src="ralador9.png" alt="Ralador 9" /></div>
     </div>
   </section>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- JS do Slick Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <!-- Inicialização do Slick -->
+  <script>
+    $(document).ready(function(){
+      $('.galeria-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 3000
+      });
+    });
+  </script>
+
 
   <div class="preco">
     De <del>R$75,00</del> por apenas <strong>R$40,00</strong>! (50% OFF)
