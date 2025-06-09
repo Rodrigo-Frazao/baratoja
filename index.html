@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ralador Inox 16 em 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #1e1e2f;
+      color: #ffffff;
+    }
+    header {
+      background: #3b0a72;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .beneficios {
+      padding: 20px;
+      background: #2b2b3d;
+      text-align: center;
+    }
+    .beneficios h2 {
+      color: #b388ff;
+    }
+    .beneficios ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .beneficios ul li::before {
+      content: "✔️";
+      margin-right: 10px;
+      color: #b388ff;
+    }
+    .cta {
+      background: #3b0a72;
+      padding: 30px;
+      text-align: center;
+    }
+    .cta h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    .botao {
+      background: #7c4dff;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .contador {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ralador Inox 16 em 1</h1>
+    <p>Praticidade, eficiência e inovação na sua cozinha!</p>
+  </header>
+
+  <section class="galeria">
+    <img src="ralador1.png" alt="Ralador 1" />
+    <img src="ralador2.png" alt="Ralador 2" />
+    <img src="ralador3.png" alt="Ralador 3" />
+    <img src="ralador4.png" alt="Ralador 4" />
+    <img src="ralador5.png" alt="Ralador 5" />
+    <img src="ralador6.png" alt="Ralador 6" />
+    <img src="ralador7.png" alt="Ralador 7" />
+    <img src="ralador9.png" alt="Ralador 9" />
+  </section>
+
+  <section class="beneficios">
+    <h2>Por que escolher o Ralador 16 em 1?</h2>
+    <ul>
+      <li>16 funções diferentes em um único produto</li>
+      <li>Design moderno e resistente</li>
+      <li>Compacto e fácil de limpar</li>
+      <li>Ideal para frutas, legumes, queijos e mais</li>
+      <li>Economia de tempo na cozinha</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>🔥 Oferta por tempo limitado!</h2>
+    <div class="contador" id="contador"></div>
+    <a href="#comprar" class="botao">COMPRAR AGORA</a>
+  </section>
+
+  <a href="https://wa.me/SEUNUMERO?text=Olá!%20Tenho%20interesse%20no%20Ralador%2016%20em%201." class="whatsapp" target="_blank">Fale conosco</a>
+
+  <script>
+    function iniciarContagemRegressiva() {
+      const tempoFinal = new Date();
+      tempoFinal.setHours(tempoFinal.getHours() + 1);
+
+      function atualizarContador() {
+        const agora = new Date();
+        const distancia = tempoFinal - agora;
+
+        if (distancia <= 0) {
+          document.getElementById("contador").innerHTML = "Oferta expirada!";
+          return;
+        }
+
+        const horas = Math.floor((distancia / (1000 * 60 * 60)) % 24);
+        const minutos = Math.floor((distancia / (1000 * 60)) % 60);
+        const segundos = Math.floor((distancia / 1000) % 60);
+
+        document.getElementById("contador").innerHTML =
+          `Termina em ${horas}h ${minutos}m ${segundos}s`;
+      }
+
+      atualizarContador();
+      setInterval(atualizarContador, 1000);
+    }
+
+    iniciarContagemRegressiva();
+  </script>
+</body>
+</html>
