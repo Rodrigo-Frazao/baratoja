@@ -2,14 +2,14 @@
 <html lang="pt-br">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17170477082"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17170477082"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'AW-17170477082');
-  </script>
+  gtag('config', 'AW-17170477082');
+</script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -94,4 +94,140 @@
       padding: 30px;
       text-align: center;
     }
-    .botoes-container {
+    .cta h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    .botao {
+      background: #7c4dff;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      margin-left: 100px;
+      text-decoration: none;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .botao2 {
+      background: #7c4dff;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      position: absolute;
+      left: 20px;
+      text-decoration: none;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .contador {
+      color: white;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="desconto-banner">
+    🎉 50% OFF! DE R$<del>75,00</del> POR <strong>R$40,00</strong>
+  </div>
+
+  <header>
+    <h1>Ralador Inox 16 em 1</h1>
+    <p>Praticidade, eficiência e inovação na sua cozinha!</p>
+  </header>
+
+  <section class="galeria">
+    <div class="galeria-slider">
+      <img src="ralador1.png" alt="Ralador 1" />
+      <img src="ralador2.png" alt="Ralador 2" />
+      <img src="ralador3.png" alt="Ralador 3" />
+      <img src="ralador4.png" alt="Ralador 4" />
+      <img src="ralador5.png" alt="Ralador 5" />
+      <img src="ralador6.png" alt="Ralador 6" />
+      <img src="ralador7.png" alt="Ralador 7" />
+      <img src="ralador9.png" alt="Ralador 9" />
+    </div>
+  </section>
+
+  <div class="preco">
+    De <del>R$75,00</del> por apenas <strong>R$40,00</strong>! (50% OFF)
+  </div>
+<a href="https://barato-ja.mycartpanda.com/checkout/186245679:1" class="botao">COMPRAR AGORA</a>
+  <section class="beneficios">
+    <h2>Por que escolher o Ralador 16 em 1?</h2>
+    <ul>
+      <li>16 funções diferentes em um único produto</li>
+      <li>Design moderno e resistente</li>
+      <li>Compacto e fácil de limpar</li>
+      <li>Ideal para frutas, legumes, queijos e mais</li>
+      <li>Economia de tempo na cozinha</li>
+    </ul>
+  </section>
+
+  <section class="video">
+    <h2>Veja o ralador em ação:</h2>
+    <iframe src="https://www.youtube.com/embed/wi-5kt_8LC0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="cta">
+    <h2>🔥 Oferta por tempo limitado!</h2>
+    <div class="contador" id="contador"></div>
+    <a href="https://barato-ja.mycartpanda.com/checkout/186245679:1" class="botao2">COMPRAR AGORA</a>
+  </section>
+
+  <a href="https://wa.me/SEUNUMERO?text=Olá!%20Tenho%20interesse%20no%20Ralador%2016%20em%201." class="whatsapp" target="_blank">Fale conosco</a>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $('.galeria-slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 3000
+    });
+
+    function iniciarContagemRegressiva() {
+      const tempoFinal = new Date();
+      tempoFinal.setHours(tempoFinal.getHours() + 1);
+
+      function atualizarContador() {
+        const agora = new Date();
+        const distancia = tempoFinal - agora;
+
+        if (distancia <= 0) {
+          document.getElementById("contador").innerHTML = "Oferta expirada!";
+          return;
+        }
+
+        const horas = Math.floor((distancia / (1000 * 60 * 60)) % 24);
+        const minutos = Math.floor((distancia / (1000 * 60)) % 60);
+        const segundos = Math.floor((distancia / 1000) % 60);
+
+        document.getElementById("contador").innerHTML =
+          Termina em ${horas}h ${minutos}m ${segundos}s;
+      }
+
+      atualizarContador();
+      setInterval(atualizarContador, 1000);
+    }
+
+    iniciarContagemRegressiva();
+  </script>
+</body>
+</html>
