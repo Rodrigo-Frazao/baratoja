@@ -1,64 +1,33 @@
-<!-- ... cabeçalho omitido para foco ... -->
-<style>
-  /* ... outros estilos ... */
-
-  .slider-provas img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 12px;
-    display: block;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  }
-
-  .provas-sociais {
-    padding: 40px 10px;
-    background-color: #2b2b3d;
-    text-align: center;
-  }
-
-  .provas-sociais h2 {
-    color: #ffea00;
-    font-size: 26px;
-    margin-bottom: 30px;
-  }
-
-  .slider-provas {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-</style>
-
-<!-- ... corpo da página omitido para foco ... -->
-
-<!-- SEÇÃO DE PROVAS SOCIAIS -->
-<section class="provas-sociais">
-  <h2>📸 Clientes satisfeitos com o produto!</h2>
-  <div class="slider-provas">
-    <div><img src="Provasocial1.png" alt="Prova Social 1" /></div>
-    <div><img src="provasocial2.png" alt="Prova Social 2" /></div>
-    <div><img src="provasocial3.png" alt="Prova Social 3" /></div>
-    <div><img src="provasocial4.png" alt="Prova Social 4" /></div>
-  </div>
-</section>
-
-<!-- ... scripts no final da página ... -->
+<!-- jQuery e Slick (se ainda não estiverem no seu código) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script>
-  $('.slider-provas').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1
+  $(document).ready(function () {
+    $('.galeria-slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 3000
+    });
+
+    $('.slider-provas').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
         }
-      }
-    ]
+      ]
+    });
   });
 </script>
