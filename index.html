@@ -79,21 +79,6 @@
       height: 315px;
       border-radius: 10px;
     }
-    .provas-sociais {
-      padding: 30px 20px;
-      background: #2b2b3d;
-    }
-    .provas-sociais h2 {
-      text-align: center;
-      color: #b388ff;
-    }
-    .slider-provas img {
-      width: 95%;
-      margin: 0 auto;
-      border-radius: 12px;
-      max-height: 300px;
-      object-fit: contain;
-    }
     .cta {
       background: #3b0a72;
       padding: 30px;
@@ -103,28 +88,15 @@
       color: white;
       margin-bottom: 15px;
     }
-    .botao {
+    .botao, .botao2 {
       background: #7c4dff;
       color: white;
       padding: 15px 30px;
       font-size: 18px;
-      position: relative;
-      left: 10px;
-      text-decoration: none;
       border-radius: 10px;
-      display: inline-block;
-    }
-    .botao2 {
-      background: #7c4dff;
-      color: white;
-      padding: 15px 30px;
-      font-size: 18px;
-      position: relative;
-      top: 6px;
-      align-items: center;
       text-decoration: none;
-      border-radius: 10px;
       display: inline-block;
+      margin: 10px auto;
     }
     .contador {
       font-size: 24px;
@@ -144,6 +116,30 @@
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    /* SLIDER PROVAS */
+    .provas-sociais {
+      padding: 30px 20px;
+      background-color: #2b2b3d;
+      text-align: center;
+    }
+    .provas-sociais h2 {
+      color: #ffea00;
+      margin-bottom: 20px;
+    }
+    .slider-provas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slider-provas img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 12px;
+      display: block;
     }
   </style>
 </head>
@@ -175,8 +171,19 @@
   </div>
   <br>
   <div class="contador" id="contador"></div>
-  <br> 
+  <br>
   <a href="https://barato-ja.mycartpanda.com/checkout/186245679:1" class="botao">COMPRAR AGORA</a>
+
+  <!-- SEÇÃO DE PROVAS SOCIAIS -->
+  <section class="provas-sociais">
+    <h2>📸 Clientes satisfeitos com o produto!</h2>
+    <div class="slider-provas">
+      <div><img src="Provasocial1.png" alt="Prova Social 1" /></div>
+      <div><img src="Prova social2.png" alt="Prova Social 2" /></div>
+      <div><img src="provasocial3.png" alt="Prova Social 3" /></div>
+      <div><img src="provasocial4.png" alt="Prova Social 4" /></div>
+    </div>
+  </section>
 
   <section class="beneficios">
     <h2>Por que escolher o Ralador 16 em 1?</h2>
@@ -194,81 +201,61 @@
     <iframe src="https://www.youtube.com/embed/wi-5kt_8LC0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
   </section>
 
-  <!-- PROVAS SOCIAIS -->
-  <section class="provas-sociais">
-    <h2>O que estão dizendo...</h2>
-    <div class="slider-provas">
-      <div><img src="Provasocial1.png" alt="Depoimento 1" /></div>
-      <div><img src="Prova social2.png" alt="Depoimento 2" /></div>
-      <div><img src="provasocial3.png" alt="Depoimento 3" /></div>
-      <div><img src="provasocial4.png" alt="Depoimento 4" /></div>
-    </div>
-  </section>
-
   <section class="cta">
     <h2>🔥 Oferta por tempo limitado!</h2>
     <div class="contador" id="contador"></div>
   </section>
 
   <a href="https://barato-ja.mycartpanda.com/checkout/186245679:1" class="botao2">COMPRAR AGORA</a>
-
   <a href="https://wa.me/5521978722140?text=Olá!%20Tenho%20interesse%20no%20Ralador%2016%20em%201." class="whatsapp" target="_blank">Fale conosco</a>
 
-  <!-- jQuery e Slick -->
+  <!-- SCRIPTS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $('.galeria-slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 3000
-      });
+    $('.galeria-slider').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 3000
+    });
 
-      $('.slider-provas').slick({
-        dots: true,
-        infinite: true,
-        speed: 600,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1
-            }
+    $('.slider-provas').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
           }
-        ]
-      });
+        }
+      ]
     });
 
     function iniciarContagemRegressiva() {
       const tempoFinal = new Date();
       tempoFinal.setHours(tempoFinal.getHours() + 1);
-
       function atualizarContador() {
         const agora = new Date();
         const distancia = tempoFinal - agora;
-
         if (distancia <= 0) {
-          document.getElementById("contador").innerHTML = "Oferta expirada!";
+          document.querySelectorAll(".contador").forEach(el => el.innerHTML = "Oferta expirada!");
           return;
         }
-
         const horas = Math.floor((distancia / (1000 * 60 * 60)) % 24);
         const minutos = Math.floor((distancia / (1000 * 60)) % 60);
         const segundos = Math.floor((distancia / 1000) % 60);
-
-        document.getElementById("contador").innerHTML =
-          `Termina em ${horas}h ${minutos}m ${segundos}s`;
+        document.querySelectorAll(".contador").forEach(el => {
+          el.innerHTML = `Termina em ${horas}h ${minutos}m ${segundos}s`;
+        });
       }
-
       atualizarContador();
       setInterval(atualizarContador, 1000);
     }
