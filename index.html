@@ -1,266 +1,64 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ralador Inox 16 em 1</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #1e1e2f;
-      color: #ffffff;
-    }
-    header {
-      background: #3b0a72;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .desconto-banner {
-      background: #5e35b1;
-      padding: 15px;
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-      color: #ffea00;
-    }
-    .galeria {
-      padding: 20px;
-    }
-    .galeria-slider img {
-      width: 100%;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .preco {
-      font-size: 26px;
-      text-align: center;
-      margin-top: 20px;
-    }
-    .preco del {
-      color: #ff6f61;
-      margin-right: 10px;
-    }
-    .preco strong {
-      color: #76ff03;
-    }
-    .beneficios {
-      padding: 20px;
-      background: #2b2b3d;
-      text-align: center;
-    }
-    .beneficios h2 {
-      color: #b388ff;
-    }
-    .beneficios ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-      max-width: 600px;
-      margin: 20px auto;
-    }
-    .beneficios ul li::before {
-      content: "✔️";
-      margin-right: 10px;
-      color: #b388ff;
-    }
-    .video {
-      padding: 20px;
-      text-align: center;
-    }
-    .video iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
-      border-radius: 10px;
-    }
-    .cta {
-      background: #3b0a72;
-      padding: 30px;
-      text-align: center;
-    }
-    .cta h2 {
-      color: white;
-      margin-bottom: 15px;
-    }
-    .botao, .botao2 {
-      background: #7c4dff;
-      color: white;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 10px auto;
-    }
-    .contador {
-      font-size: 24px;
-      color: #ffea00;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
+<!-- ... cabeçalho omitido para foco ... -->
+<style>
+  /* ... outros estilos ... */
 
-    /* SLIDER PROVAS */
-    .provas-sociais {
-      padding: 30px 20px;
-      background-color: #2b2b3d;
-      text-align: center;
-    }
-    .provas-sociais h2 {
-      color: #ffea00;
-      margin-bottom: 20px;
-    }
-    .slider-provas {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .slider-provas img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      margin: 0 auto;
-      border-radius: 12px;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <div class="desconto-banner">
-    🎉 50% OFF! DE R$<del>75,00</del> POR <strong>R$40,00</strong>
+  .slider-provas img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  }
+
+  .provas-sociais {
+    padding: 40px 10px;
+    background-color: #2b2b3d;
+    text-align: center;
+  }
+
+  .provas-sociais h2 {
+    color: #ffea00;
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .slider-provas {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+</style>
+
+<!-- ... corpo da página omitido para foco ... -->
+
+<!-- SEÇÃO DE PROVAS SOCIAIS -->
+<section class="provas-sociais">
+  <h2>📸 Clientes satisfeitos com o produto!</h2>
+  <div class="slider-provas">
+    <div><img src="Provasocial1.png" alt="Prova Social 1" /></div>
+    <div><img src="Prova social2.png" alt="Prova Social 2" /></div>
+    <div><img src="provasocial3.png" alt="Prova Social 3" /></div>
+    <div><img src="provasocial4.png" alt="Prova Social 4" /></div>
   </div>
+</section>
 
-  <header>
-    <h1>Ralador Inox 16 em 1</h1>
-    <p>Praticidade, eficiência e inovação na sua cozinha!</p>
-  </header>
+<!-- ... scripts no final da página ... -->
 
-  <section class="galeria">
-    <div class="galeria-slider">
-      <div><img src="ralador1.png" alt="Ralador 1" /></div>
-      <div><img src="ralador2.png" alt="Ralador 2" /></div>
-      <div><img src="ralador3.png" alt="Ralador 3" /></div>
-      <div><img src="ralador4.png" alt="Ralador 4" /></div>
-      <div><img src="ralador5.png" alt="Ralador 5" /></div>
-      <div><img src="ralador6.png" alt="Ralador 6" /></div>
-      <div><img src="ralador7.png" alt="Ralador 7" /></div>
-      <div><img src="ralador9.png" alt="Ralador 9" /></div>
-    </div>
-  </section>
-
-  <div class="preco">
-    De <del>R$75,00</del> por apenas <strong>R$40,00</strong>! (50% OFF)
-  </div>
-  <br>
-  <div class="contador" id="contador"></div>
-  <br>
-  <a href="https://barato-ja.mycartpanda.com/checkout/186245679:1" class="botao">COMPRAR AGORA</a>
-
-  <!-- SEÇÃO DE PROVAS SOCIAIS -->
-  <section class="provas-sociais">
-    <h2>📸 Clientes satisfeitos com o produto!</h2>
-    <div class="slider-provas">
-      <div><img src="Provasocial1.png" alt="Prova Social 1" /></div>
-      <div><img src="Prova social2.png" alt="Prova Social 2" /></div>
-      <div><img src="provasocial3.png" alt="Prova Social 3" /></div>
-      <div><img src="provasocial4.png" alt="Prova Social 4" /></div>
-    </div>
-  </section>
-
-  <section class="beneficios">
-    <h2>Por que escolher o Ralador 16 em 1?</h2>
-    <ul>
-      <li>16 funções diferentes em um único produto</li>
-      <li>Design moderno e resistente</li>
-      <li>Compacto e fácil de limpar</li>
-      <li>Ideal para frutas, legumes, queijos e mais</li>
-      <li>Economia de tempo na cozinha</li>
-    </ul>
-  </section>
-
-  <section class="video">
-    <h2>Veja o ralador em ação:</h2>
-    <iframe src="https://www.youtube.com/embed/wi-5kt_8LC0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-  </section>
-
-  <section class="cta">
-    <h2>🔥 Oferta por tempo limitado!</h2>
-    <div class="contador" id="contador"></div>
-  </section>
-
-  <a href="https://barato-ja.mycartpanda.com/checkout/186245679:1" class="botao2">COMPRAR AGORA</a>
-  <a href="https://wa.me/5521978722140?text=Olá!%20Tenho%20interesse%20no%20Ralador%2016%20em%201." class="whatsapp" target="_blank">Fale conosco</a>
-
-  <!-- SCRIPTS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <script>
-    $('.galeria-slider').slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      adaptiveHeight: true,
-      autoplay: true,
-      autoplaySpeed: 3000
-    });
-
-    $('.slider-provas').slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1
-          }
+<script>
+  $('.slider-provas').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
         }
-      ]
-    });
-
-    function iniciarContagemRegressiva() {
-      const tempoFinal = new Date();
-      tempoFinal.setHours(tempoFinal.getHours() + 1);
-      function atualizarContador() {
-        const agora = new Date();
-        const distancia = tempoFinal - agora;
-        if (distancia <= 0) {
-          document.querySelectorAll(".contador").forEach(el => el.innerHTML = "Oferta expirada!");
-          return;
-        }
-        const horas = Math.floor((distancia / (1000 * 60 * 60)) % 24);
-        const minutos = Math.floor((distancia / (1000 * 60)) % 60);
-        const segundos = Math.floor((distancia / 1000) % 60);
-        document.querySelectorAll(".contador").forEach(el => {
-          el.innerHTML = `Termina em ${horas}h ${minutos}m ${segundos}s`;
-        });
       }
-      atualizarContador();
-      setInterval(atualizarContador, 1000);
-    }
-
-    iniciarContagemRegressiva();
-  </script>
-</body>
-</html>
+    ]
+  });
+</script>
